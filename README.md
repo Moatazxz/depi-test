@@ -13,5 +13,9 @@ this repo for demo
 
 6- commit Id 
 7- how to check commits history - git log 
-8- you should pull first  
+8- you should pull first befor push 
+9- branches 
+    - git branch to know your branch 
+    - git branch <NAME> create new branch
+    - git checkout <BRANCH_NAME> move to the new branch
 
