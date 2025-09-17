@@ -25,3 +25,21 @@
         \ B
 
 ==
+Rebase  
+          H
+          |
+   A -B - C            
+          \ K  - l - M 
+
+
+
+
+=> Merge Vs Rebase
+
+===
+workflow 
+1- release follow 
+2- git flow 
+=====
+
+
