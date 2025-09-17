@@ -18,3 +18,10 @@
         A - B - C  - M -N - x - y - D - v - k
 > new branch     \ x - y      
           
+
+                m-commit
+                    |
+  main  A - Z - B - X
+        \ B
+
+==
