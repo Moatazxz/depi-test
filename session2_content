@@ -1,0 +1,11 @@
+1 - merge conflict and How to solve it 
+2- merge types:
+        1- three-ways 
+        2- fast forward
+
+    # Fast forward
+
+               Head 
+                ||
+        A - B - C 
+> new branch     \ x - y      -> merge 
