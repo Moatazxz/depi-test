@@ -52,6 +52,9 @@ Session3:
 
 3 - .Ignore file - > Ignore set of file to be pushed to the branch to protect your code cred
 
+4 - git stash:
+        - Save your checges in stach Area (Untracked + Staged)
+        - 
 
 
 
