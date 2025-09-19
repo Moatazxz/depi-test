@@ -41,15 +41,16 @@ workflow
 1- release follow 
 2- git flow 
 =====
-test PR
-test PR2
-
+PUll Request - PR : 
+- Prevent to merge directly to spesfic branch 
+- and You can Add reviewers or checks like (CICD) before merge 
 ====
 Session3:
 1- Fork - > Copy of  repo in another Account to be replicated in your Account 
 
-2- Contributions - > Manage who has Access In your Repo 
+2- Contributions - > Manage who has Access In your Repo with roles (read - write - triage - maintin - admin)
 
+3 - .Ignore file - > Ignore set of file to be pushed to the branch to protect your code cred
 
 
 
