@@ -57,5 +57,7 @@ Session3:
 5 - git stash:
         - Save your checges in stach Area (Untracked + Staged)
 
+6- cherrry pick
+
 
 
