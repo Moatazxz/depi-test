@@ -12,9 +12,9 @@ pipeline {
 
         stage('build') {
             steps {
-             sh ```
+             sh """
                   docker build -t docker.io/moatazxz/myapp:v5 .
-             ```
+             """
 
             }
         }
