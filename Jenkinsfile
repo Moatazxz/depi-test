@@ -13,25 +13,21 @@ pipeline {
         stage('build') {
             steps {
              sh ```
-                  echo "hello from Build"
+                  docker build -t docker.io/moatazxz/myapp:v5 .
              ```
 
             }
         }
 
-        stage('test') {
+        stage('push Image') {
             steps {
-                sh ```
-                  echo "hello from test"
-             ```
-            }
-        }
-
-       stage('dockerImage') {
-            steps {
-                sh ```
-                  echo "hello from docker image"
-             ```
+                 withCredentials([usernamePassword(credentialsId: 'dockerhub-cred', usernameVariable: 'DOCKER_USER', passwordVariable: 'DOCKER_PASS')]) {
+                        sh """
+                            // echo "$DOCKER_PASS" | docker login -u "$DOCKER_USER" --password-stdin docker.io
+                            docker login -u "$DOCKER_USER"  -p "$DOCKER_PASS"
+                            docker push docker.io/moatazxz/myapp:latest
+                        """
+             
             }
         }
 
