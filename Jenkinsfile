@@ -12,26 +12,26 @@ pipeline {
 
         stage('build') {
             steps {
-             sh ```
+             sh '''
                   echo "hello from Build"
-             ```
+             '''
 
             }
         }
 
         stage('test') {
             steps {
-                sh ```
+                sh '''
                   echo "hello from test"
-             ```
+             '''
             }
         }
 
        stage('dockerImage') {
             steps {
-                sh ```
+                sh '''
                   echo "hello from docker image"
-             ```
+             '''
             }
         }
 
@@ -51,4 +51,5 @@ pipeline {
     //   sh '''
                   
     //                docker build -t "${registry}/moatazxz/myapp:latest"  .
+
     //             '''
