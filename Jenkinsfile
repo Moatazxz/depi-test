@@ -8,7 +8,16 @@ pipeline {
 //    }
     stages {
 
-
+       stage('Checkout') {
+      steps {
+        checkout scm
+      }
+    }
+    stage('xx') {
+      steps {
+        sh 'git config remote.origin.url https://github.com/Moatazxz/depi-test.git'
+      }
+    }
 
         stage('build') {
             steps {
@@ -50,3 +59,4 @@ pipeline {
     //                docker build -t "${registry}/moatazxz/myapp:latest"  .
 
     //             '''
+
