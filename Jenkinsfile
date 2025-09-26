@@ -28,6 +28,7 @@ pipeline {
                             docker push docker.io/moatazxz/myapp:latest
                         """
              
+
             }
         }
 
@@ -37,7 +38,7 @@ pipeline {
 
 }
 
-
+}
 
 
 
@@ -47,4 +48,5 @@ pipeline {
     //   sh '''
                   
     //                docker build -t "${registry}/moatazxz/myapp:latest"  .
+
     //             '''
