@@ -62,8 +62,7 @@ pipeline {
                 sh """
                     ssh -o StrictHostKeyChecking=no ubuntu@52.73.12.205 '
                      set -euo pipefail
-                     cho "$DOCKER_PASS" | docker login -u "$DOCKER_USER" --password-stdin docker.io
-                     docker run -p 80:80 -d  docker.io/moatazxz/myapp:v5
+                     docker run -p 80:80 -d  $registry/$reponame/$appname:$BUILD_NUMBER
                      docker ps'
                 """
 
@@ -117,6 +116,7 @@ pipeline {
 // NODE_NAME	Name of the Jenkins agent node
 
 // EXECUTOR_NUMBER	Executor number running the build
+
 
 
 
