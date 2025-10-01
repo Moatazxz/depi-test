@@ -53,7 +53,7 @@ pipeline {
        stage("deploy to remote machine") {
 
            steps{
-             sshagent(credentials: ['ec2-key']) [
+             sshagent(credentials: ['ec2-key']) {
                  
                 sh """
                     ssh ubuntu@52.73.12.205 '
@@ -63,7 +63,7 @@ pipeline {
                 """
 
 
-             ]
+             }
 
 
            }
