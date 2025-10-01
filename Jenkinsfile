@@ -25,6 +25,7 @@ pipeline {
             steps {
              sh """
                   docker build -t docker.io/moatazxz/myapp:v5 .
+                  docker images
              """
 
             }
@@ -36,7 +37,7 @@ pipeline {
                         sh """
                            
                             docker login -u "$DOCKER_USER"  -p "$DOCKER_PASS"
-                            docker push docker.io/moatazxz/myapp:latest
+                            docker push docker.io/moatazxz/myapp:v5
                         """
              
 
@@ -61,6 +62,7 @@ pipeline {
     //                docker build -t "${registry}/moatazxz/myapp:latest"  .
 
     //             '''
+
 
 
 
