@@ -10,4 +10,4 @@ Add enhnacment
 
 add function login
 
-
+ # echo "$DOCKER_PASS" | docker login -u "$DOCKER_USER" --password-stdin docker.io
