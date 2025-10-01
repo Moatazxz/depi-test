@@ -8,12 +8,12 @@ pipeline {
 //    }
     stages {
 
-       stage('Checkout') {
-      steps {
-        cleanWs()  
-       checkout scm 
-      }
-    }
+    //    stage('Checkout') {
+    //   steps {
+    //     cleanWs()  
+    //    checkout scm 
+    //   }
+    // }
     // stage('xx') {
     //   steps {
     //     sh 'git config remote.origin.url https://github.com/Moatazxz/depi-test.git'
@@ -34,7 +34,7 @@ pipeline {
             steps {
                  withCredentials([usernamePassword(credentialsId: 'dockerhub-cred', usernameVariable: 'DOCKER_USER', passwordVariable: 'DOCKER_PASS')]) {
                         sh """
-                            // echo "$DOCKER_PASS" | docker login -u "$DOCKER_USER" --password-stdin docker.io
+                           
                             docker login -u "$DOCKER_USER"  -p "$DOCKER_PASS"
                             docker push docker.io/moatazxz/myapp:latest
                         """
@@ -61,6 +61,7 @@ pipeline {
     //                docker build -t "${registry}/moatazxz/myapp:latest"  .
 
     //             '''
+
 
 
 
