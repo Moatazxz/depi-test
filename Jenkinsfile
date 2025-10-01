@@ -56,7 +56,7 @@ pipeline {
              sshagent(credentials: ['ec2-key']) {
                  
                 sh """
-                    ssh ubuntu@52.73.12.205 '
+                    ssh -o StrictHostKeyChecking=no ubuntu@52.73.12.205 '
                      set -euo pipefail
                      docker run -d  docker.io/moatazxz/myapp:v5
                      docker ps'
@@ -87,6 +87,7 @@ pipeline {
     //                docker build -t "${registry}/moatazxz/myapp:latest"  .
 
     //             '''
+
 
 
 
