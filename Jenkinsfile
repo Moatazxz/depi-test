@@ -6,6 +6,7 @@ pipeline {
     registry= "docker.io"
     reponame= "moatazxz"
     appname= "myapp"
+    env= prod
 
    }
     stages {
@@ -35,6 +36,11 @@ pipeline {
         }
 
         stage('push Image') {
+
+          when {
+              environment name: 'env', value: 'prod'
+
+          }
             steps {
                  withCredentials([usernamePassword(credentialsId: 'dockerhub-cred', usernameVariable: 'DOCKER_USER', passwordVariable: 'DOCKER_PASS')]) {
                         sh """
@@ -53,6 +59,9 @@ pipeline {
     // deploy stage 
       
        stage("deploy to remote machine") {
+        when{
+          branch: 'main'
+        }
 
            steps{
 
