@@ -2,7 +2,7 @@
 pipeline {
     agent any
    
-   enviroment{
+   environment{
     registry= "docker.io"
     reponame= "moatazxz"
     appname= "myapp"
